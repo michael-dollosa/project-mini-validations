@@ -1,0 +1,73 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  @include flex-column;
+
+  border-top: 10px solid #9e9e9e;
+}
+
+.header {
+  height: 65%;
+  width: 60%;
+  padding: 20rem 3rem 0 3rem;
+  font-family: 'Neucha', cursive;
+  font-size: 3rem;
+  text-align: center;
+  transition: .2s ease;
+}
+
+.footer {
+  height: 35%;
+  @include flex-column;
+
+  > button {
+    padding: 0.8rem 4rem;
+    background-color: white;
+    border: 1px solid #000000;
+    box-shadow: -1px 2px 2px -1px #4e4e4e;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    letter-spacing: 1px;
+
+    transition: .2s ease;
+  }
+
+  > button:hover {
+    padding: 0.8rem 4.2rem;
+    letter-spacing: 2px;
+    
+  }
+
+  > button:active {
+
+    box-shadow: 0 1px 2px -1px #4e4e4e;
+    transform: translateY(2px);
+  }
+
+  > footer {
+    font-size: 0.8rem;
+    padding-bottom: 1rem;
+  }
+}
+
